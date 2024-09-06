@@ -1,0 +1,39 @@
+body{
+    color: #eee;
+   
+    background-color: #003077;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+        
+}
+
+
+.tela_usuarios .usuario{
+    background-color: rgb(21, 82, 206);
+    color: #eee;
+    transition: 0.3s;
+
+}
+
+.tela_usuarios .usuario:hover{
+    background-color: rgb(21, 82, 206);
+}
+
+.tela_usuarios .usuario:active{
+    background-color: rgb(136, 227, 255);
+}
+
+
+.tela_chat{
+    background-color: rgb(10, 26, 75);
+    border-radius: 10px 0px 0px 0px;
+}
+
+
+
+.tela_chat .chat_mensagem:hover{
+    background-color: #4e5987;
+    margin-left: 20px;
+}

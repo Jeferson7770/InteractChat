@@ -1,0 +1,132 @@
+.btn-group {
+  margin-bottom: 10px; /* Adiciona espaçamento abaixo do grupo de botões */
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.btn {
+  border-radius: 10px; /* Torna os botões arredondados */
+  margin-right: 10px; /* Adiciona espaçamento entre os botões */
+  border: none;
+  padding: 10px 20px; /* Aumenta o preenchimento interno */
+  background: linear-gradient(to bottom, #0f0feb, #261440);
+  color: white; /* Define a cor do texto como branco */
+  font-weight: bold; /* Torna o texto mais gordinho */
+  text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.btn:hover {
+  color: #0f0;
+}
+
+/* O último botão não precisa de margem à direita */
+.btn:last-child {
+  margin-right: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff; /* Cor padrão do texto */
+  transition: color 0.3s; /* Efeito de transição suave na cor */
+}
+
+/* Estilo para o bloco azul ao passar o mouse sobre o menu */
+.navbar-nav .nav-item:hover {
+  background-color: #c0e909; /* Cor de fundo azul durante o hover */
+  border-radius: 15px; /* Borda arredondada */
+}
+
+/* Adicione este estilo no seu arquivo CSS ou dentro da tag <style> no cabeçalho do HTML */
+.navbar-nav .active {
+  background-color: #c0e909; /* Cor de destaque do item de menu ativo */
+  color: #fff; /* Cor do texto no item de menu ativo */
+  border-radius: 15px; /* Borda arredondada */
+}
+
+/* Estilo para o link do menu no hover */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff; /* Cor branca durante o hover */
+}
+
+.menu-item {
+  font-size: 20px; /* Tamanho de fonte desejado */
+  margin-right: 15px; /* Adiciona margem à direita de cada item do menu */
+  margin-left: 15px; /* Adiciona margem à esquerda de cada item do menu */
+}
+
+header {
+  position: relative;
+}
+
+.navbar {
+  z-index: 1; /* Coloca o menu sobre a imagem */
+}
+
+
+.custom-navbar {
+  background-color: #003077;
+}
+
+footer {
+  background-color: #003077;
+  color: #fff;
+  padding: 20px 0;
+  
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+ 
+}
+
+
+.custom-navbar .container-fluid {
+  display: flex;
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;      /* Centraliza verticalmente */
+  padding: 20px;
+}
+
+.navbar-brand {
+  font-size: 30px;           /* Tamanho do texto do logotipo */
+  color: white;              /* Cor do texto */
+  position: absolute;        /* Permite posicionamento absoluto */
+  left: 50%;                 /* Move o logotipo para o centro */
+  transform: translateX(-50%); /* Ajusta para centralizar o elemento */
+
+}
+
+.navbar-brand:hover{
+  color: #0f0;
+}
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Ajuste para ocupar toda a altura da tela */
+}
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.5); /* Ajuste o valor para controlar o nível de escurecimento */
+
+}
+
+.parallax img {
+  width: 100%;
+  height: auto; /* Alterado para auto para manter a proporção da imagem */
+  min-height: 100%; /* Garante que a imagem ocupe toda a altura do container */
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+
+}
+
+
+.navbar-brand {
+  font-family: "Fira Sans Heavy", sans-serif;
+  font-weight: 900; /* Fira Sans Heavy é equivalente a font-weight 900 */
+}

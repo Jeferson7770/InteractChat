@@ -1,0 +1,715 @@
+body{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+
+.tela_mensagem .tema{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+
+
+.tela_chat .chat_mensagem{
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    transition: 0.3s;
+    
+}
+.tela_login{
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 400px;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.informacao{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.informacao .nome{
+    text-align: left;
+    font-weight: bold;
+}
+
+.informacao .valor{
+   display: inline;
+   position: absolute;
+   right: 0px;
+}
+
+.tela_login form input [type="submit"] {
+    width: 60%;
+}
+
+.tela_login form{
+    text-align: center;
+}
+
+
+.tela_usuarios{
+    position: absolute;
+    left: 0;
+    top: 120px;
+    box-sizing: border-box;
+    width: 400px;
+    bottom: 0;
+    padding: 10px;
+    overflow-y: scroll !important;
+
+}
+
+.tela_usuarios .usuario{
+ display: block;
+ position: relative;
+ box-sizing: border-box;
+ margin-bottom: 10px;
+ border: 1px solid black;
+ height: 50px;
+ padding: 2px;
+ vertical-align: middle;
+ border-radius: 10px;
+}
+
+.tela_usuarios .usuario::before{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.tela_usuarios .usuario[online='false']::before{
+    content: '📴';
+   
+}
+
+.tela_usuarios .usuario[online='true']::before{
+    content: '😊';
+   
+}
+
+
+
+.tela_usuarios .nome{
+ position: absolute;
+ top: 0px;
+ height: 30px;
+ vertical-align: middle;
+ left: 30px;
+
+}
+
+.tela_usuarios .login{
+position: absolute;
+right: 15px;
+}
+
+.tela_mensagem{
+    position: absolute;
+    left: 400px;
+    top: 0;
+    box-sizing: border-box;
+    right: 0px;
+    height: 80px;
+    padding: 10px;
+   
+}
+
+.tela_mensagem .mensagem{
+    position: absolute;
+    left: 2%;
+    width: 85%;
+}
+
+.tela_chat .chat_mensagem[msg_priv="true"]::before{
+    content: '🔑';
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+}
+
+.usuario div ::before{
+    content: '' !important;
+}
+
+.tela_mensagem input[type="submit"]{
+    position: absolute;
+    right: 2%;
+    width: 9%;
+}
+
+
+
+.tela_chat{
+    position: absolute;
+    left: 400px;
+    top: 80px;
+    box-sizing: border-box;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+
+@keyframes exemple{
+    from {
+        height: 0px;
+    }
+        to{height: 50px;
+
+        }
+}
+
+.tela_chat .msg_nova{
+    animation-name: example;
+    animation-duration: 0.25s;
+}
+
+.tela_chat .chat_mensagem{
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+
+.tela_chat .chat_mensagem .nome {
+    position: absolute;
+    right: 5px;
+    left: 3px;
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.tela_chat .chat_mensagem .login {
+    position: absolute;
+    left: 5px;
+    bottom: 17px;
+    opacity: 0.5;
+    font-size: 12px;
+
+}
+
+.tela_chat .chat_mensagem .texto {
+    position: absolute;
+    left: 80px;
+    top: 12px;
+    right: 120px;
+    bottom: 2px;
+    overflow: hidden;
+    user-select: all;
+    font-size: 20px;
+    margin-left: 30px;
+    
+}
+
+.tela_chat .chat_mensagem .datahora {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    opacity: 0.5;
+    font-size: 10px;
+
+}
+
+::before{
+    content: attr(dataicon);
+}
+
+
+
+
+/* Estilo básico para todos os botões */
+button, input[type="submit"], input[type="button"] {
+    padding: 10px 15px;
+    margin-left:  10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Estilo específico para o botão "logar" */
+input[type="submit"] {
+    background: linear-gradient(to bottom, #0f0feb, #261440);
+    color: white; /* Cor do texto branco */
+}
+
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #0b0ba9, #261440);
+}
+
+/* Estilo específico para o botão "Cadastrar" */
+input[type="button"] {
+    background: linear-gradient(to bottom, #0f0feb, #261440);
+    color: white; /* Cor do texto branco */
+ 
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(to bottom, #0b0ba9, #261440);
+}
+
+/* Estilo opcional para botões desabilitados */
+button:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+body{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+
+.tela_mensagem .tema{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+
+
+.tela_chat .chat_mensagem{
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.tela_login{
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 400px;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.informacao{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.informacao .nome{
+    text-align: left;
+    font-weight: bold;
+}
+
+.informacao .valor{
+   display: inline;
+   position: absolute;
+   right: 0px;
+}
+
+.tela_login form input [type="submit"] {
+    width: 60%;
+}
+
+.tela_login form{
+    text-align: center;
+}
+
+
+.tela_usuarios{
+    position: absolute;
+    left: 0;
+    top: 120px;
+    box-sizing: border-box;
+    width: 400px;
+    bottom: 0;
+    padding: 10px;
+    overflow-y: scroll !important;
+
+}
+
+.tela_usuarios .usuario{
+ display: block;
+ position: relative;
+ box-sizing: border-box;
+ margin-bottom: 10px;
+ border: 1px solid black;
+ height: 50px;
+ padding: 2px;
+ vertical-align: middle;
+ border-radius: 10px;
+}
+
+.tela_usuarios .usuario::before{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.tela_usuarios .usuario[online='false']::before{
+    content: '📴';
+   
+}
+
+.tela_usuarios .usuario[online='true']::before{
+    content: '😊';
+   
+}
+
+
+
+.tela_usuarios .nome{
+ position: absolute;
+ top: 0px;
+ height: 30px;
+ vertical-align: middle;
+ left: 30px;
+
+}
+
+.tela_usuarios .login{
+position: absolute;
+right: 15px;
+}
+
+.tela_mensagem{
+    position: absolute;
+    left: 400px;
+    top: 0;
+    box-sizing: border-box;
+    right: 0px;
+    height: 80px;
+    padding: 10px;
+   
+}
+
+.tela_mensagem .mensagem{
+    position: absolute;
+    left: 2%;
+    width: 85%;
+}
+
+.tela_chat .chat_mensagem[msg_priv="true"]::before{
+    content: '🔑';
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+}
+
+.usuario div ::before{
+    content: '' !important;
+}
+
+.tela_mensagem input[type="submit"]{
+    position: absolute;
+    right: 2%;
+    width: 9%;
+}
+
+
+
+.tela_chat{
+    position: absolute;
+    left: 400px;
+    top: 80px;
+    box-sizing: border-box;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+
+@keyframes exemple{
+    from {
+        height: 0px;
+    }
+        to{height: 50px;
+
+        }
+}
+
+.tela_chat .msg_nova{
+    animation-name: example;
+    animation-duration: 0.25s;
+}
+
+.tela_chat .chat_mensagem{
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+
+.tela_chat .chat_mensagem .nome {
+    position: absolute;
+    right: 5px;
+    left: 3px;
+    opacity: 0.5;
+    font-size: 10px;
+}
+
+.tela_chat .chat_mensagem .login {
+    position: absolute;
+    left: 5px;
+    bottom: 17px;
+    opacity: 0.5;
+    font-size: 8px;
+
+}
+
+.tela_chat .chat_mensagem .texto {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    right: 120px;
+    bottom: 5px;
+    overflow: hidden;
+    user-select: all;
+    font-size: 20px;
+}
+
+.tela_chat .chat_mensagem .datahora {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    opacity: 0.5;
+    font-size: 12px;
+
+}
+
+::before{
+    content: attr(dataicon);
+}
+
+
+
+
+/* Estilo básico para todos os botões */
+button, input[type="submit"], input[type="button"] {
+    padding: 10px 15px;
+    margin-left:  10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Estilo específico para o botão "logar" */
+input[type="submit"] {
+    background: linear-gradient(to bottom, #0f0feb, #261440);
+    color: white; /* Cor do texto branco */
+}
+
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #0b0ba9, #261440);
+}
+
+/* Estilo específico para o botão "Cadastrar" */
+input[type="button"] {
+    background: linear-gradient(to bottom, #0f0feb, #261440);
+    color: white; /* Cor do texto branco */
+ 
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(to bottom, #0b0ba9, #261440);
+}
+
+/* Estilo opcional para botões desabilitados */
+button:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.informacao{
+   font-weight: bold;
+
+}
+/* Estilo básico para todos os botões */
+button, input[type="submit"], input[type="button"] {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo específico para o botão "logar" */
+input[type="submit"] {
+    background: linear-gradient(to bottom, #0f0feb, #261440);
+    color: white; /* Cor do texto branco */
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #0b0ba9, #261440);
+}
+
+/* Estilo específico para o botão "Cadastrar" */
+input[type="button"] {
+    background: linear-gradient(to bottom, #0f0feb, #261440);
+    color: white; /* Cor do texto branco */
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(to bottom, #0b0ba9, #261440);
+}
+
+/* Estilo opcional para botões desabilitados */
+button:disabled, input[type="submit"]:disabled, input[type="button"]:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.informacao {
+    font-weight: bold;
+}
+
+.informacaom{
+    font-weight: bold;
+}
+
+/* Media queries para tablets e celulares */
+@media (max-width: 1024px) {
+    .tela_login {
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        border: none;
+    }
+
+    .tela_usuarios {
+        width: 100%;
+        top: 100px;
+        padding: 0px;
+    }
+
+    .tela_chat {
+        left: 0;
+        top: 100px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .tela_mensagem {
+        left: 0;
+        top: auto;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+
+    .tela_usuarios .usuario {
+        height: auto;
+        padding: 5px;
+    }
+
+    .tela_mensagem input[type="submit"] {
+        width: 20%;
+    }
+
+    
+    .tela_chat .chat_mensagem .nome,
+    .tela_chat .chat_mensagem .login,
+    .tela_chat .chat_mensagem .texto,
+    .tela_chat .chat_mensagem .datahora {
+        font-size: 10px;
+    }
+
+    button, input[type="submit"], input[type="button"] {
+        font-size: 8px;
+        padding: 7px 10px;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+   
+    #botao-enviar {
+        font-size: 8px;
+        padding: 7px 10px;
+        margin-top: 30px;
+    }
+   
+    .informacao{
+        
+        margin-left: 15px;
+    }
+
+    .tela_chat .chat_mensagem .texto {
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        right: 120px;
+        bottom: 5px;
+        overflow: hidden;
+        user-select: all;
+        font-size: 20px;
+    }
+    
+   
+    /* Media Queries para tornar o texto mais responsivo */
+@media (max-width: 1024px) {
+    .informacao {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .informacao {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte em telas de celular */
+    }
+}
+
+@media (max-width: 480px) {
+    .informacao {
+        font-size: 0.7rem; /* Ajuste adicional para telas muito pequenas */
+    }
+}
+
+.tema{
+    margin-top: 75px;
+
+}
+}
+
+@media (max-width:  1024px) {
+    .informacaom {
+        display: none;
+    }
+}
