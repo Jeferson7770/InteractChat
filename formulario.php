@@ -43,8 +43,10 @@ if (isset($_POST['submit'])) {
                 if ($stmt === false) {
                     $error_message = "Erro na preparação da inserção: " . mysqli_error($link);
                 } else {
-                    // Usando a senha em texto simples
-                    mysqli_stmt_bind_param($stmt, "ssss", $login, $nome, $senha, $online);
+                    // Usando a função md5 para hashear a senha antes de armazená-la no banco
+                    $senha_hashed = md5($senha); // Cria o hash em MD5
+
+                    mysqli_stmt_bind_param($stmt, "ssss", $login, $nome, $senha_hashed, $online);
 
                     if (mysqli_stmt_execute($stmt)) {
                         $success_message = "Cadastro realizado com sucesso!";

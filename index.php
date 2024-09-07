@@ -17,7 +17,11 @@ if (isset($_POST['acao'])) {
         case "logar":
             $login = mysqli_real_escape_string($link, $_POST['usuario']);
             $senha = mysqli_real_escape_string($link, $_POST['senha']);
-            $qry = mysqli_query($link, "SELECT * FROM usuarios WHERE lower(login) = lower('$login') AND senha = '$senha'");
+            
+            // Convertendo a senha fornecida em MD5 para comparar com o valor no banco de dados
+            $senha_hashed = md5($senha);
+            
+            $qry = mysqli_query($link, "SELECT * FROM usuarios WHERE lower(login) = lower('$login') AND senha = '$senha_hashed'");
             
             if ($qry && $row = mysqli_fetch_assoc($qry)) {
                 $_SESSION['logado'] = true;
@@ -82,9 +86,8 @@ Header('Content-type: text/html; charset=UTF-8');
                 <input class="valor" name="senha" type="password"/>
             </span>
             <input type="submit" value="logar"/>
-        <!-- Botão para redirecionar ao formulário de cadastro -->
-           <input type="button" value="Cadastrar" onclick="window.location.href='formulario.php';"/>
-
+            <!-- Botão para redirecionar ao formulário de cadastro -->
+            <input type="button" value="Cadastrar" onclick="window.location.href='formulario.php';"/>
         </form>
         <?php if (isset($_SESSION['msg'])) { echo "<h2>".$_SESSION['msg']."</h2>"; unset($_SESSION['msg']); } ?>
     <?php } ?>
