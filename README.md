@@ -60,10 +60,6 @@ CREATE TABLE mensagens (
 
 Se estiver usando XAMPP, inicie Apache e MySQL.
 
-Caso esteja rodando PHP manualmente, execute:
-
-php -S localhost:8000
-
 Acesse o InteractChat no navegador:
 
 http://localhost/InteractChat/
