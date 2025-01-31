@@ -27,7 +27,7 @@ Antes de instalar e rodar o **InteractChat**, você precisará ter instalado:
 
 git clone https://github.com/Jeferson7770/InteractChat.git
 
-###2️⃣ Configurar o Banco de Dados
+2️⃣ Configurar o Banco de Dados
 
 Acesse o phpMyAdmin no navegador:
 
@@ -56,7 +56,7 @@ CREATE TABLE mensagens (
     datahora DATETIME NOT NULL
 );
 
-###3️⃣ Configurar a Conexão com o Banco de Dados
+3️⃣ Configurar a Conexão com o Banco de Dados
 
 Abra o arquivo bd.php e edite as credenciais:
 
@@ -73,7 +73,7 @@ if (!$link) {
 }
 ?>
 
-###4️⃣ Iniciar o Servidor
+4️⃣ Iniciar o Servidor
 
 Se estiver usando XAMPP, inicie Apache e MySQL.
 
