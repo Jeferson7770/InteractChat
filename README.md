@@ -68,10 +68,6 @@ Acesse o InteractChat no navegador:
 
 http://localhost/InteractChat/
 
-ou, se estiver usando PHP embutido:
-
-http://localhost:8000/
-
 ## 🔧 Melhorias Futuras
 
 - 🔒 Melhorar segurança (substituir md5() por password_hash() para armazenar senhas)
