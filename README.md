@@ -27,13 +27,13 @@ Antes de instalar e rodar o **InteractChat**, você precisará ter instalado:
 
 git clone https://github.com/Jeferson7770/InteractChat.git
 
-2️⃣ Configurar o Banco de Dados
+### 2️⃣ Configurar o Banco de Dados
 
 Acesse o phpMyAdmin no navegador:
 
 http://localhost/phpmyadmin/
 
-##Crie o banco de dados e execute o seguinte SQL na aba SQL:
+Crie o banco de dados e execute o seguinte SQL na aba SQL:
 
 CREATE DATABASE chat;
 
@@ -56,7 +56,7 @@ CREATE TABLE mensagens (
     datahora DATETIME NOT NULL
 );
 
-3️⃣ Iniciar o Servidor
+### 3️⃣ Iniciar o Servidor
 
 Se estiver usando XAMPP, inicie Apache e MySQL.
 
