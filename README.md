@@ -74,11 +74,11 @@ http://localhost:8000/
 
 🔧 Melhorias Futuras
 
--🔒 Melhorar segurança (substituir md5() por password_hash() para armazenar senhas)
+- 🔒 Melhorar segurança (substituir md5() por password_hash() para armazenar senhas)
 
--🎨 Melhorar o design com Bootstrap ou Tailwind CSS
+- 🎨 Melhorar o design com Bootstrap ou Tailwind CSS
 
--⚡ Implementar WebSockets para mensagens em tempo real sem polling
+- ⚡ Implementar WebSockets para mensagens em tempo real sem polling
 
 ## 📌 Autor  
 
