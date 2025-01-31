@@ -56,24 +56,7 @@ CREATE TABLE mensagens (
     datahora DATETIME NOT NULL
 );
 
-3️⃣ Configurar a Conexão com o Banco de Dados
-
-Abra o arquivo bd.php e edite as credenciais:
-
-<?php
-$host = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "chat";
-
-$link = mysqli_connect($host, $usuario, $senha, $banco);
-
-if (!$link) {
-    die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
-}
-?>
-
-4️⃣ Iniciar o Servidor
+3️⃣ Iniciar o Servidor
 
 Se estiver usando XAMPP, inicie Apache e MySQL.
 
