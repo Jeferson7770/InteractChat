@@ -34,7 +34,7 @@ Acesse o phpMyAdmin no navegador:
 http://localhost/phpmyadmin/
 
 Crie o banco de dados e execute o seguinte SQL na aba SQL:
-
+```sql
 CREATE DATABASE chat;
 
 USE chat;
@@ -55,6 +55,8 @@ CREATE TABLE mensagens (
     texto TEXT NOT NULL,
     datahora DATETIME NOT NULL
 );
+
+```
 
 ### 3️⃣ Iniciar o Servidor
 
